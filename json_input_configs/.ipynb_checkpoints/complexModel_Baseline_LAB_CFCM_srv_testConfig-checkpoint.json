@@ -1,0 +1,19 @@
+{
+    "input_path": "/home/stimme/Programming/BacterialGrowth/Lorena",
+    "output_path": "/scratch/stimme/Bacterial_CoInfection",
+    "output_folder": "test_output",
+    "strain_type": "LAB",
+    "exp_type": "CFCM",
+    "condition": "Baseline",
+
+    "simulation_location": "server",
+    "number_cpu": 255,
+    "model": "complex",
+    "number_of_start_points": 10,
+    "simulated_annealing_iterations": 1000,
+    "get_only_min_solution": false,
+    "use_CFCM_parameters_as_start": false,
+    "CFCM_parameter_paths": [],
+    "CFU_per_sample": false,
+    "CFU_at_0timepoint": false
+}

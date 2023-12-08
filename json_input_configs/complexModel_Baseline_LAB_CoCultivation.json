@@ -1,0 +1,54 @@
+{
+    "input":{
+        "path": "ExperimentalData",
+        "simulate TSB control experiments separately": true,
+        "use CFCM parameters as start points": true,
+        "CFCM parameter paths": ["results/LAB/CFCM/Baseline/LAB_CFCM_Baseline_complexModel_ext2/min_parameters.csv"],
+        "fit CFU counts at 24h": true,
+        "CFU counts per sample": true,
+        "use CFU at 0h timepoint": true,
+        "CFU 0h data path": "ExperimentalData/input/LAB/CoCultivation/Baseline/CFU_data/CFU_fractions_CoCultivation_Baseline_t0h.csv",
+        "CFU 24h data path": "ExperimentalData/input/LAB/CoCultivation/Baseline/CFU_data/CFU_fractions_CoCultivation_Baseline_t24h.csv"
+    },
+    "output":{
+        "path": "results",
+        "output folder add time stamp": false,
+        "folder extension": "complexModel",
+        "save raw data complete": false,
+        "save raw data number best points": 100
+    },
+    "model":{
+        "strain type": "LAB",
+        "experiment type": "CoCultivation",
+        "condition": "Baseline",
+        "model": "complex",
+        "species": ["SA", "AB"]
+    },
+    "fitting":{
+        "boundaries":{
+            "rg": [0.01,2],
+            "C_start": [0.01,50],
+            "C_end": [0.01,18],
+            "p": [0.01,24],
+            "g": [0.01, 5]
+        },
+        "number of start points": 100,
+        "simulated annealing iterations": 10000,
+        "get only min solution": false
+    },
+    "TSB":{
+      "input":{
+          "use CFCM parameters as start points": false,
+          "fit CFU counts at 24h": false,
+          "use CFU at 0h timepoint": false
+      },
+      "model":{
+          "experiment type": "CFCM",
+          "species": []
+      }
+    },
+    "cpu":{
+        "simulation location": "server",
+        "number cpu": 255
+    }
+}

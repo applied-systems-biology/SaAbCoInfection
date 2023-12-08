@@ -1,0 +1,42 @@
+{
+    "input":{
+        "path": "/home/stimme/Programming/BacterialGrowth/Lorena",
+        "use CFCM parameters as start points": false,
+        "CFCM parameter path": "",
+        "fit CFU counts at 24h": false,
+        "CFU counts per sample": false,
+        "use CFU at 0h timepoint": false,
+        "CFU 0h data path": "",
+        "CFU 24h data path": ""
+    },
+    "output":{
+        "path": "/scratch/stimme/Bacterial_CoInfection",
+        "output folder add time stamp": false,
+        "folder extension": "complexModel",
+        "save raw data complete": false,
+        "save raw data number best points": 100
+    },
+    "model":{
+        "strain type": "LAB",
+        "experiment type": "CFCM",
+        "condition": "Agr",
+        "model": "complex",
+        "species": ["SA", "AB"]
+    },
+    "fitting":{
+        "boundaries":{
+            "rg": [0.01,5],
+            "C_start": [0.01,30],
+            "C_end": [0.01,30],
+            "p": [2,17],
+            "g": [0.1, 2]
+        },
+        "number of start points": 1,
+        "simulated annealing iterations": 1000,
+        "get only min solution": false
+    },
+    "cpu":{
+        "simulation location": "server",
+        "number cpu": 255
+    }
+}
