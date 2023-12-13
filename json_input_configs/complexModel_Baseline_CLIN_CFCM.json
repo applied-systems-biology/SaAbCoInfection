@@ -1,6 +1,6 @@
 {
     "input":{
-        "path": "/home/stimme/Programming/BacterialGrowth/Lorena",
+        "path": "ExperimentalData",
         "simulate TSB control experiments separately": false,
         "use CFCM parameters as start points": false,
         "CFCM parameter paths": [],
@@ -11,7 +11,7 @@
         "CFU 24h data path": ""
     },
     "output":{
-        "path": "/scratch/stimme/Bacterial_CoInfection",
+        "path": "results",
         "output folder add time stamp": false,
         "folder extension": "complexModel",
         "save raw data complete": false,
